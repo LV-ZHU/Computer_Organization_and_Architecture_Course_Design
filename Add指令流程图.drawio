@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="第 1 页" id="yz6iAvDXHZRXiv_D-Sco">
+    <mxGraphModel dx="1089" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-5" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-2" parent="1" style="whiteSpace=wrap;html=1;" value="取指&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;imem_word_addr ← (PC - 32&#39;h0040_0000) &amp;gt;&amp;gt; 2&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;cpu_instr ← IMEM[imem_word_addr]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;NPC ← PC + 4&lt;/code&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="280" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-7" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-4" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;译码&lt;/code&gt;&lt;/div&gt;&lt;code dir=&quot;ltr&quot;&gt;Rsc ← cpu_instr[25:21]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rtc ← cpu_instr[20:16]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rdc ← cpu_instr[15:11]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Control Unit识别add指令&lt;/code&gt;" vertex="1">
+          <mxGeometry height="90" width="160" x="340" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-9" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-6" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;读取操作数&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;Rs ← R[Rsc]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rt ← R[Rtc]&lt;/code&gt;&lt;font face=&quot;monospace&quot;&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="100" x="550" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-11" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code&gt;执行加法&lt;/code&gt;&lt;/div&gt;&lt;code&gt;alu_result ← Rs + Rt&lt;/code&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="720" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-10" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;font face=&quot;monospace&quot;&gt;写回并更新PC&lt;/font&gt;&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;R[Rdc] ← alu_result&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;PC ← NPC&lt;/code&gt;&lt;font face=&quot;monospace&quot;&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="940" y="105" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
