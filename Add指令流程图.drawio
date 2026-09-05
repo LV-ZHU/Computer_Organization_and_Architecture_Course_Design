@@ -13,20 +13,20 @@
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-7" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-6" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-4" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;译码&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Rtc ← cpu_instr[20:16]&lt;br/&gt;Rdc ← cpu_instr[15:11]&lt;br/&gt;sa  ← cpu_instr[10:6]&lt;br/&gt;Control Unit识别对应移位指令&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="105" width="180" x="340" y="97.5" as="geometry" />
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-4" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;译码&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Rsc ← cpu_instr[25:21]&lt;br/&gt;Rtc ← cpu_instr[20:16]&lt;br/&gt;Rdc ← cpu_instr[15:11]&lt;br/&gt;Control Unit识别对应可变移位指令&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="200" x="319" y="97.5" as="geometry" />
         </mxCell>
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-9" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-8" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-6" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;读取操作数&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Rt ← R[Rtc]&lt;br/&gt;Ext5 ← {27&#39;b0, sa}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="120" x="560" y="105" as="geometry" />
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-6" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;monospace&quot;&gt;读取操作数&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Rs ← R[Rsc]&lt;br/&gt;Rt ← R[Rtc]&lt;br/&gt;shift_amount ← Rs[4:0]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="540" y="105" as="geometry" />
         </mxCell>
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-11" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-10" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code&gt;执行逻辑左移&lt;/code&gt;&lt;/div&gt;&lt;code&gt;alu_result ← Rt &amp;lt;&amp;lt; sa&lt;/code&gt;" vertex="1">
-          <mxGeometry height="90" width="150" x="720" y="105" as="geometry" />
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code&gt;执行可变算术右移&lt;/code&gt;&lt;/div&gt;&lt;code&gt;alu_result ← $signed(Rt) &amp;gt;&amp;gt;&amp;gt; Rs[4:0]&lt;/code&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="710" y="105" as="geometry" />
         </mxCell>
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-10" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;font face=&quot;monospace&quot;&gt;写回并更新PC&lt;/font&gt;&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;R[Rdc] ← alu_result&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;PC ← NPC&lt;/code&gt;&lt;font face=&quot;monospace&quot;&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="140" x="940" y="105" as="geometry" />
