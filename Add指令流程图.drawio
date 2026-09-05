@@ -13,7 +13,7 @@
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-7" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-6" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-4" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;译码&lt;/code&gt;&lt;/div&gt;&lt;code dir=&quot;ltr&quot;&gt;Rsc ← cpu_instr[25:21]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rtc ← cpu_instr[20:16]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rdc ← cpu_instr[15:11]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Control Unit识别subu指令&lt;/code&gt;" vertex="1">
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-4" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;译码&lt;/code&gt;&lt;/div&gt;&lt;code dir=&quot;ltr&quot;&gt;Rsc ← cpu_instr[25:21]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rtc ← cpu_instr[20:16]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Rdc ← cpu_instr[15:11]&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;Control Unit识别and指令&lt;/code&gt;" vertex="1">
           <mxGeometry height="90" width="160" x="340" y="105" as="geometry" />
         </mxCell>
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-9" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-8" value="">
@@ -25,7 +25,7 @@
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-11" edge="1" parent="1" source="89ga_TUhJ9h8vdHaCrCJ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="89ga_TUhJ9h8vdHaCrCJ-10" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code&gt;执行无符号减法&lt;/code&gt;&lt;/div&gt;&lt;code&gt;alu_result ← Rs - Rt&lt;/code&gt;" vertex="1">
+        <mxCell id="89ga_TUhJ9h8vdHaCrCJ-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;code&gt;执行按位与&lt;/code&gt;&lt;/div&gt;&lt;code&gt;alu_result ← Rs &amp;amp; Rt&lt;/code&gt;" vertex="1">
           <mxGeometry height="90" width="140" x="720" y="105" as="geometry" />
         </mxCell>
         <mxCell id="89ga_TUhJ9h8vdHaCrCJ-10" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;font face=&quot;monospace&quot;&gt;写回并更新PC&lt;/font&gt;&lt;div&gt;&lt;code dir=&quot;ltr&quot;&gt;R[Rdc] ← alu_result&lt;/code&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;PC ← NPC&lt;/code&gt;&lt;font face=&quot;monospace&quot;&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
