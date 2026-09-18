@@ -1,3 +1,1 @@
-# Computer_Organization_and_Architecture_Course_Design
-计组课设，MIPS54条CPU设计
-答辩前将只上传数据通路图
+MIPS 54条CPU设计
